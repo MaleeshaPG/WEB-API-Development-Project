@@ -1,0 +1,13 @@
+const User =require("../models/userModel")
+
+const createUser = async(user)=>{
+    return await User.create(user)
+}
+
+const getUsers = async () =>{
+    return await User.find({});
+}
+
+module.exports={
+    createUser,getUsers
+}

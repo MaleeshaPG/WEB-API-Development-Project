@@ -1,0 +1,17 @@
+
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+
+const userSchema = new Schema({
+  cityName: { type: String, required: true , unique: true},
+  temp: {type: String, required: true},
+  humidity: {type: String, required: true},
+  airPressure: {type: String, required: true},
+  timeStamp: {type: Date, default: Date.now}
+  
+});
+
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;
